@@ -1,0 +1,8 @@
+{
+  "name": "Synapt Digital",
+  "description": "Synapt Digital builds high-performance websites, apps, brands and growth systems through web development, digital marketing, design, video and AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
