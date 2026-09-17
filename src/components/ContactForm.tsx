@@ -31,11 +31,16 @@ export default function ContactForm() {
     setStatus('submitting');
     
     try {
-      // Add the Web3Forms access key
+      // Add the Web3Forms access key and enable autoresponse
       const web3FormsData = {
         ...formData,
         access_key: 'b4cbc6b5-9761-4583-87c7-8167ad9bf9d3', // Added the user's real key here
-        subject: `New Lead from ${formData.name} - ${formData.company || 'No Company'}`
+        subject: `New Lead from ${formData.name} - ${formData.company || 'No Company'}`,
+        from_name: 'Synapt Digital', // Shows up as the sender name in the email to you
+        replyto: formData.email, // Allows you to hit "reply" and it goes to the customer
+        
+        // --- THIS SECTION SENDS THE AUTO-REPLY TO THE CUSTOMER ---
+        autoresponse: "Thank you for reaching out to Synapt Digital! We have received your project details and our team is reviewing them. We will be in touch with you shortly to discuss the next steps."
       };
 
       const response = await fetch('https://api.web3forms.com/submit', {
