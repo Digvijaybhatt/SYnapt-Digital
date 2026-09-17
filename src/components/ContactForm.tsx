@@ -31,12 +31,20 @@ export default function ContactForm() {
     setStatus('submitting');
     
     try {
-      const response = await fetch('/api/contact', {
+      // Add the Web3Forms access key
+      const web3FormsData = {
+        ...formData,
+        access_key: 'b4cbc6b5-9761-4583-87c7-8167ad9bf9d3', // Added the user's real key here
+        subject: `New Lead from ${formData.name} - ${formData.company || 'No Company'}`
+      };
+
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(web3FormsData),
       });
 
       if (!response.ok) {
