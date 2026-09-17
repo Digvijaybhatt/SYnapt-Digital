@@ -26,11 +26,23 @@ export default function ContactForm() {
     if (step < 4) setStep(step + 1);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('submitting');
-    // Simulate API call
-    setTimeout(() => {
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit');
+      }
+
       setStatus('success');
       // Reset form after success
       setTimeout(() => {
@@ -38,7 +50,10 @@ export default function ContactForm() {
         setStatus('idle');
         setFormData({ goal: '', budget: '', details: '', name: '', email: '', company: '', phone: '' });
       }, 3000);
-    }, 1500);
+    } catch (error) {
+      console.error(error);
+      setStatus('error');
+    }
   };
 
   return (

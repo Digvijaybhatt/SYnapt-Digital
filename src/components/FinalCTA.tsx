@@ -13,7 +13,9 @@ export default function FinalCTA() {
         </h2>
         
         <a 
-          href="#contact" 
+          href="https://calendly.com/digvijaybhatt6/30min"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center justify-center space-x-2 bg-white text-black px-10 py-5 rounded-full font-bold text-lg hover:bg-gray-200 transition-colors duration-300 hover:scale-105 transform"
         >
           <span>START A PROJECT</span>

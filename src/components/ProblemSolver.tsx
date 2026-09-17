@@ -77,7 +77,9 @@ export default function ProblemSolver() {
                   </div>
 
                   <a 
-                    href="#contact" 
+                    href="https://calendly.com/digvijaybhatt6/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center space-x-2 text-black bg-white px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition-colors"
                   >
                     <span>LET'S SOLVE IT</span>

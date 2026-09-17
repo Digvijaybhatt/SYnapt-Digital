@@ -47,13 +47,16 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-6 tracking-wider">SOCIAL</h4>
             <ul className="space-y-4">
-              {['LinkedIn', 'Instagram', 'YouTube', 'Facebook'].map((social) => (
-                <li key={social}>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm font-medium">
-                    {social}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a href="https://www.linkedin.com/company/synapt-studio/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm font-medium">
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/synapt_digital/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm font-medium">
+                  Instagram
+                </a>
+              </li>
             </ul>
           </div>
 

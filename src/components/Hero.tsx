@@ -138,7 +138,9 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-center gap-6"
           >
             <a 
-              href="#contact" 
+              href="https://calendly.com/digvijaybhatt6/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto bg-white text-black px-8 py-4 rounded-full font-semibold flex items-center justify-center space-x-2 hover:bg-gray-200 transition-colors duration-300"
             >
               <span>START A PROJECT</span>

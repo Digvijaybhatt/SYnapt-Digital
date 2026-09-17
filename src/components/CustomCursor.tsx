@@ -27,7 +27,7 @@ export default function CustomCursor() {
         // Special logic for portfolio or specific CTAs if classes are added
         if (target.closest('#work a')) {
            setHoverText("VIEW");
-        } else if (target.closest('a[href="#contact"]') && target.closest('section:not(header)')) {
+        } else if (target.closest('a[href*="calendly.com"]') && target.closest('section:not(header)')) {
            setHoverText("GO");
         } else {
            setHoverText("");

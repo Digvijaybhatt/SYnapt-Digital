@@ -52,7 +52,9 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden lg:block">
           <a 
-            href="#contact"
+            href="https://calendly.com/digvijaybhatt6/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center space-x-2 text-sm font-semibold border border-white/20 px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-all duration-300"
           >
             <span>START A PROJECT</span>
@@ -89,7 +91,9 @@ export default function Navbar() {
               </a>
             ))}
             <a 
-              href="#contact"
+              href="https://calendly.com/digvijaybhatt6/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center justify-between text-xl font-display font-medium text-white bg-white/10 p-4 rounded-lg mt-4"
             >
